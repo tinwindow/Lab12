@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Thoughtful To-Do List For Commuter Cyclist Wannabes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.5/angular.min.js" charset="utf-8"></script>
+  <script src="script.js" charset="utf-8"></script>
+</head>
+
+<body ng-app="taskList">
+  <div class="container">
+    <div ng-controller="taskListController">
+      <h2>So You Wanna Become A Commuter Cyclist</h2>
+      <ul>
+        <li ng-repeat="task in tasks track by $index">{{task | lowercase}}</li>
+      </ul>
+      <form class="form_input">
+
+
+        <label>Add Your To-Dos Here:</label>
+        <input type="text" ng-model="addNewListItem" /><br/>
+        <!--<form class="block form" ng-submit="addToDo(todo)">
+        <div class="form__input">-->
+        <button ng-click="addTask(addNewListItem)">Pile It On!</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="img">
+      <img src="Images/cyclist.jpg" width="500" height="300" frameBorder="20">
+  </div>
+
+
+</body>
+
+</html>
