@@ -65,5 +65,10 @@ label {
 
 h2 {
 text-shadow: 2px 2px 3px #000000;
-letter-spacing: 2px; 
+letter-spacing: 2px;
+}
+
+#filter {
+  margin-left: 270px;
+  margin-top: 10px; 
 }
